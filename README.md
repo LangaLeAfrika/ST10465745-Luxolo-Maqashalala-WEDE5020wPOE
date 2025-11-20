@@ -5,7 +5,11 @@ Eyethu is a retail business centre based in Joe Slovo, Port Elizabeth, South Afr
 This website is designed to provide a digital presence for Eyethu, showcasing services, promotions, and community engagement.
 
 ---
-
+**Student Information**
+* ST10465745
+* Luxolo Maqashalala
+* WEDE5020wPOE
+---
 ## 🌍 Project Overview (Project Proposal Aspect)
 
 ### Business Summary
@@ -84,15 +88,24 @@ The project follows a modular structure to ensure maintainability:
 
 ### Clone the repository
 ```bash
-git clone [https://github.com/yourusername/Eyethu-Website.git](https://github.com/yourusername/Eyethu-Website.git)
+git clone [https://github.com/LangaLeAfrika/ST10465745-Luxolo-Maqashalala-WEDE5020wPOE.git)
 
 Changelog
 
-Date/Commit ID (Short),Description,Files Affected
+Date/Commit ID (LangaLeAfrika),Virsion Updates,"services.html, style.css, enquiry.html, contact.html, about.html, index.html"
 f4173b1,Initial commit setting up the core project folder structure and base HTML files.,Initial files
 7b1b99c,"Final commit: Completed content integration across all HTML pages, added new images, and implemented base CSS styles.","services.html, style.css, enquiry.html, contact.html, about.html, new images, script.js"
-[Current Date],Resolved merge conflicts during git rebase and prepared for final submission.,"services.html, style.css, enquiry.html, contact.html, about.html, index.html"
-...,Insert all subsequent commits here,...
+[November 2025],Resolved merge conflicts during git rebase and prepared for final submission.,"services.html, style.css, enquiry.html, contact.html, about.html, index.html"
+* Update: README
+* 9faa627: 7 hours ago
+
+**POE Final Commit**
+
+README.mdUpdate README7 hours agoabout.htmlPOE Final commit8 hours ago
+contact.htmlPOE Final commit8 hours agoenquiry.htmlPOE Final commit8 hours agoindex.htmlPOE Final commit8 hours agoscript.js
+POE Final commit8 hours agoservices.htmlPOE Final commit
+8 hours agostyle.css
+POE Final commit 1 day ago,...
 
 Refference
 
@@ -100,8 +113,8 @@ All sources, including external libraries, images, and conceptual information, a
 
 jQuery: JQuery. (2024). jQuery 3.7.1. Available at: https://jquery.com/ [Accessed November 2025].
 
-Leaflet JS: Leaflet. (2024). Leaflet - an open-source JavaScript library for interactive maps. Available at: https://leafletjs.com/ [Accessed 20November 2025].
+Leaflet JS: Leaflet. (2024). Leaflet - an open-source JavaScript library for interactive maps. Available at: https://leafletjs.com/ [Accessed November 2025].
 
 Conceptual/POE Guide: The IIE. (2025). WEDE5020w Project Portfolio of Evidence Guide. Johannesburg: The Independent Institute of Education.
 
-Images: Pexels (2024). Stock Photography Used for Demo Purposes. Available at: https://www.pexels.com/ [Accessed 2025].
+Images: Pexels (2024). Stock Photography Used for Demo Purposes. Available at: https://www.pexels.com/ [Accessed November 2025].
