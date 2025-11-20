@@ -29,63 +29,19 @@
   <main class="enquiry-page">
     <h1>Enquiry</h1>
     <p>Have questions or need more info? Fill out our enquiry form below:</p>
-    <form>
-      <input type="text" name="name" placeholder="Your Name" required><br><br>
-      <input type="email" name="email" placeholder="Your Email" required><br><br>
-      <textarea name="message" placeholder="Your Message" rows="5" required></textarea><br><br>
+    <form id="enquiryForm"> 
+      <input type="text" name="name" id="name" placeholder="Your Name" required><br><br>
+      <input type="email" name="email" id="email" placeholder="Your Email" required><br><br>
+      <input type="tel" name="phone" id="phone" placeholder="Your Cell Number (e.g., +27746216649)" required><br><br> 
+      <textarea name="message" id="message" placeholder="Your Message" rows="5" required></textarea><br><br>
       <button type="submit">Send Enquiry</button>
+      <div id="validationMessage" style="color: red; margin-top: 10px;"></div> 
     </form>
   </main>
 
   <footer class="site-footer">
     <p>&copy; 2025 Eyethu Shopping Center. All rights reserved.</p>
   </footer>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eyethu Shopping Center | Enquiry</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" href="images/favicon.png">
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
-</head>
-<body>
-  <header class="site-header">
-    <div class="logo">
-      <img src="images/Our Logo.png" alt="Eyethu Shopping Center Logo">
-    </div>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="index.html">Home |</a></li>
-        <li><a href="about.html">About Us |</a></li>
-        <li><a href="services.html">Our Services |</a></li>
-        <li><a href="enquiry.html" class="active">Enquiry |</a></li>
-        <li><a href="contact.html">Contact Us |</a></li>
-      </ul>
-    </nav> 
-  </header>
-
-  <main class="enquiry-page">
-    <h1>Enquiry</h1>
-    <p>Have questions or need more info? Fill out our enquiry form below:</p>
-    <form>
-      <input type="text" name="name" placeholder="Your Name" required><br><br>
-      <input type="email" name="email" placeholder="Your Email" required><br><br>
-      <textarea name="message" placeholder="Your Message" rows="5" required></textarea><br><br>
-      <button type="submit">Send Enquiry</button>
-    </form>
-  </main>
-
-  <footer class="site-footer">
-    <p>&copy; 2025 Eyethu Shopping Center. All rights reserved.</p>
-  </footer>
-
 <script src="script.js"></script>
-  
 </body>
 </html>

@@ -1,0 +1,19 @@
+Contact Us
+    <p>Get in touch with Eyethu Shopping Center. Whether you want to invest, rent retail space, or need IT services, we’re here for you.</p>
+
+    <div class="contact-info">
+      <div class="contact-card">
+        <h3>📞 Phone</h3>
+        <p>+27 74 621 6649</p>
+      </div>
+
+      <div class="contact-card">
+        <h3>📧 Email</h3>
+        <p>info@eyethushopping.co.za</p>
+      </div>
+
+      <div class="contact-card">
+        <h3>📍 Address</h3>
+        <p>Eyethu Shopping Center<br>Joe Slovo, Port Elizabeth<br>South Africa</p>
+      </div>
+    </div>

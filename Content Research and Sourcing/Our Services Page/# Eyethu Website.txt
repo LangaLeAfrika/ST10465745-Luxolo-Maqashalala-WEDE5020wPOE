@@ -1,0 +1,3 @@
+# Eyethu Website
+
+Eyethu is a retail business centre based in Joe Slovo, Port Elizabeth, South Africa. The development consists of **Eyethu Filling Station**, **Eyethu Superstore**, and **Eyethu Shopping Centre** (8 retail shops).

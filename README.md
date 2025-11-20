@@ -74,10 +74,11 @@ This project utilized open-source tools and free services to minimize costs.
 ## 📂 Project Structure (Addressing File Structure Feedback)
 The project follows a modular structure to ensure maintainability:
 
+**🗺️ Website Sitemap: Eyethu Shopping Center**
+The Eyethu website follows a simple, flat hierarchy, where all five primary pages are linked directly from the main navigation bar.
 
-**SITE MAP**
-. ├── about.html ├── contact.html ├── enquiry.html ├── index.html ├── services.html ├── script.js ├── style.css ├── README.md ├── images/ │ ├── Inside store.jpg │ ├── Lux.jpg │ ├── Our Logo.png │ ├── Store 1.jpg │ ├── Store 3.jpg └── [other supporting files]
-
+**Sitemap Structure Details**
+| Level | Page Name | File Name | Description/Purpose | | :--- | :--- | :--- | | Level 1 | Home (Root) | index.html | The entry point of the website, providing an overview of the business and highlights of the three core services. | | Level 2 | About Us | about.html | Contains the business profile, vision, and the profile of the founder, Luxolo Than Maqashalala. | | Level 2 | Our Services | services.html | Details the specific offerings: Eyethu Filling Station, Eyethu Superstore, and Retail Shops. | | Level 2 | Enquiry | enquiry.html | Provides a form for customers and prospective tenants/partners to send structured messages to the business. | | Level 2 | Contact Us | contact.html | Lists the phone number, email address, physical address, and includes a location map. | | Global | CSS | style.css | Styles and formatting for all pages. | | Global | JavaScript | script.js | Handles interactive elements and client-side functionality. |
 ---
 
 ## 🚀 Getting Started
@@ -90,7 +91,7 @@ The project follows a modular structure to ensure maintainability:
 ```bash
 git clone [https://github.com/LangaLeAfrika/ST10465745-Luxolo-Maqashalala-WEDE5020wPOE.git)
 
-Changelog
+**Changelog**
 
 18 November/POE Final Commit ID (LangaLeAfrika), Version Updates, "services.html, style.css, enquiry.html, contact.html, about.html, index.html"
 f4173b1, Initial commit setting up the core project folder structure and base HTML files., Initial files

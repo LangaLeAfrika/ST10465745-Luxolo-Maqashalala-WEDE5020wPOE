@@ -1,0 +1,198 @@
+💻 Question 1: Java Application Code Structure
+The solution requires three main Java files: IEstateAgent.java (interface), EstateAgent.java (class), and a main class (e.g., EstateAgentReport.java) to run the logic and handle the 2D array. Unit tests will reside in a separate package.
+
+1. The Interface: IEstateAgent.java
+This interface defines the contract for the methods required.
+
+Java
+
+public interface IEstateAgent {
+
+    // Calculates the total sales for a single agent from their monthly sales array
+    double EstateAgentSales (double[] propertySales);
+
+    // Calculates the 2% commission from the total property sales amount
+    double EstateAgentCommission (double propertySales);
+
+    // Determines the index (position) of the top-performing agent
+    // based on the total sales array for all agents
+    int TopEstateAgent(double[] totalSales);
+
+}
+2. The Class Implementation: EstateAgent.java
+This class implements the IEstateAgent interface and contains the core logic.
+
+Java
+
+import java.util.Arrays;
+
+public class EstateAgent implements IEstateAgent {
+
+    private final double COMMISSION_RATE = 0.02; // 2% commission rate [cite: 22]
+
+    /**
+     * Calculates the total property sales from an array of monthly sales.
+     * @param propertySales Array of sales figures for one estate agent (e.g., Jan, Feb, Mar).
+     * @return The sum of all property sales.
+     */
+    @Override
+    public double EstateAgentSales(double[] propertySales) {
+        double totalSales = 0.0;
+        for (double sale : propertySales) {
+            totalSales += sale;
+        }
+        return totalSales;
+    }
+
+    /**
+     * Calculates the commission (2%) earned from the total property sales.
+     * @param propertySales The total sales amount for an estate agent.
+     * @return The calculated commission.
+     */
+    @Override
+    public double EstateAgentCommission(double propertySales) {
+        return propertySales * COMMISSION_RATE;
+    }
+
+    /**
+     * Determines the index of the top-performing estate agent.
+     * @param totalSales Array containing the total sales for all estate agents.
+     * @return The index (0 for agent 1, 1 for agent 2) of the top-selling agent.
+     */
+    @Override
+    public int TopEstateAgent(double[] totalSales) {
+        if (totalSales == null || totalSales.length == 0) {
+            return -1; // Indicate error or empty array
+        }
+
+        double maxSales = totalSales[0];
+        int topAgentIndex = 0;
+
+        for (int i = 1; i < totalSales.length; i++) {
+            if (totalSales[i] > maxSales) {
+                maxSales = totalSales[i];
+                topAgentIndex = i;
+            }
+        }
+        return topAgentIndex;
+    }
+}
+3. The Main Application: EstateAgentReport.java
+This class contains the main method to initialise the data, use the EstateAgent class, and display the required report.
+
+Java
+
+import java.text.NumberFormat;
+import java.util.Locale;
+
+public class EstateAgentReport {
+
+    public static void main(String[] args) {
+        
+        // 1. Data Initialization
+        String[] agentNames = {"Joe Bloggs", "Jane Doe"};
+        String[] months = {"JAN", "FEB", "MAR"};
+        
+        // 2D Array to store sales: 2 Agents (rows) x 3 Months (columns) [cite: 16, 19]
+        // Note: Sales figures are stored as Rands (doubles).
+        double[][] salesData = {
+            // Jan,        Feb,          Mar
+            {800000.0, 1500000.0, 2000000.0}, // Joe Bloggs sales [cite: 20]
+            {700000.0, 1200000.0, 1600000.0}  // Jane Doe sales [cite: 20]
+        };
+
+        EstateAgent agentProcessor = new EstateAgent();
+        double[] totalSales = new double[agentNames.length];
+        double[] commissions = new double[agentNames.length];
+        
+        // Use NumberFormat for R currency output as seen in the sample screenshot [cite: 23]
+        NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(new Locale("en", "ZA"));
+        
+        System.out.println("ESTATE AGENTS SALES REPORT");
+        System.out.printf("%-15s %-10s %-10s %-10s\n", "ESTATE AGENTS", "JAN", "FEB", "MAR");
+
+        // 2. Process and Print Sales Data
+        for (int i = 0; i < salesData.length; i++) {
+            System.out.printf("%-15s", agentNames[i]);
+            for (int j = 0; j < salesData[i].length; j++) {
+                // Print monthly sales
+                System.out.printf("R %.1f   ", salesData[i][j]);
+            }
+            System.out.println();
+
+            // Calculate Total Sales and Commission
+            totalSales[i] = agentProcessor.EstateAgentSales(salesData[i]); // Q.1.2 [cite: 21]
+            commissions[i] = agentProcessor.EstateAgentCommission(totalSales[i]); // Q.1.3 [cite: 22]
+        }
+        
+        System.out.println("------------------------------------------");
+        
+        // 3. Print Totals and Commission
+        for (int i = 0; i < agentNames.length; i++) {
+            System.out.println("Total property sales for " + agentNames[i] + " = " + currencyFormat.format(totalSales[i]));
+            System.out.println("Sales Commission for " + agentNames[i] + " = " + currencyFormat.format(commissions[i]));
+        }
+
+        System.out.println("------------------------------------------");
+
+        // 4. Determine and Print Top Agent
+        int topAgentIndex = agentProcessor.TopEstateAgent(totalSales);
+        
+        if (topAgentIndex != -1) {
+            System.out.println("Top performing estate agent: " + agentNames[topAgentIndex]); // Q.1.3 [cite: 18]
+        } else {
+            System.out.println("No sales data available.");
+        }
+    }
+}
+4. Unit Test Structure (Using JUnit)
+These tests must be placed in a separate test package.
+
+Java
+
+// Inside the 'test' package
+
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+public class EstateAgentTest {
+
+    private EstateAgent agent = new EstateAgent();
+
+    // Test 1: To supply the property sales to the estate agent sales method. [cite: 30]
+    @Test
+    void CalculateTotalSales_ReturnsTotalSales() {
+        double[] sales = {800000.0, 1500000.0, 2000000.0};
+        double expectedTotal = 4300000.0;
+        
+        double actualTotal = agent.EstateAgentSales(sales);
+        
+        // Assert that the calculated total matches the expected value
+        assertEquals(expectedTotal, actualTotal, 0.001); // Use delta for double comparison
+    }
+
+    // Test 2: To supply a total property sales amount to the estate agent commission method. [cite: 30]
+    @Test
+    void CalculateTotalCommission_ReturnsCommission() {
+        double totalSales = 4300000.0;
+        double expectedCommission = 86000.0; // 2% of 4,300,000
+        
+        double actualCommission = agent.EstateAgentCommission(totalSales);
+        
+        // Assert that the calculated commission matches the expected value
+        assertEquals(expectedCommission, actualCommission, 0.001);
+    }
+
+    // Test 3: To supply total sales for each estate agent to the top estate agent method. [cite: 30]
+    @Test
+    void TopAgent_ReturnsTopPosition() {
+        double[] allTotalSales = {4300000.0, 3500000.0}; // Joe Bloggs, Jane Doe
+        int expectedIndex = 0; // Joe Bloggs (index 0) is the top agent
+        
+        int actualIndex = agent.TopEstateAgent(allTotalSales);
+        
+        // Assert that the index of the top agent (index 0) is returned
+        assertEquals(expectedIndex, actualIndex);
+    }
+}
+Do you want to see the essential code structure for Question 2 (GUI, Validation, and File I/O) next?

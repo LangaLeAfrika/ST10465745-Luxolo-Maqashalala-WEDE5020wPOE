@@ -1,20 +1,19 @@
-
 /* Reset some defaults */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4; /* light neutral background */
+  background-color: #f4f4f4; 
   color: #333;
   line-height: 1.6;
 }
 
 /* Header */
 .site-header {
-  background-color: #2e7d32; /* deep green */
+  background-color: #2e7d32; 
   color: white;
   padding: 10px 20px;
-  display: flex;
-  justify-content: space-between;
+  display: flex; 
+  justify-content: space-between; 
   align-items: center;
 }
 
@@ -48,13 +47,23 @@ body {
 .services-page, 
 .enquiry-page, 
 .contact-page {
-  background-color: #4caf50; /* lighter green accent */
+  background-color: #4caf50; 
   color: white;
   text-align: center;
   padding: 60px 20px;
   border-radius: 10px;
   margin: 20px;
 }
+
+
+.home-page > p,
+.about-page > p,
+.services-page > p,
+.contact-page > p {
+  max-width: 750px; 
+  margin: 10px auto; 
+}
+
 
 /* Footer */
 .site-footer {
@@ -65,9 +74,75 @@ body {
   margin-top: 40px;
 }
 
-/* ===================== */
+/* Responsive Styles (Flexbox) */
+
+/* Styles for Home Page Service Cards */
+.services-highlight {
+  margin-top: 30px;
+  padding: 20px;
+}
+
+.service-card {
+  background-color: white;
+  color: #333;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 15px; 
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  flex: 1 1 30%; 
+  max-width: 30%; 
+}
+
+.service-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Flex Container for Cards (Desktop View) */
+@media (min-width: 768px) {
+  .services-highlight-container {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-around; 
+    gap: 20px;
+    margin-top: 20px;
+  }
+}
+
+.owner-profile {
+  display: flex;
+  flex-direction: column; 
+  text-align: center; 
+  max-width: 900px; 
+  margin: 0 auto;
+  align-items: center; 
+}
+
+.owner-profile img {
+  width: 200px;
+  margin: 0 auto 20px auto; 
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Flex container for Owner Profile (Desktop View) */
+@media (min-width: 768px) {
+    .owner-profile {
+        flex-direction: row; 
+        text-align: left;
+        align-items: center; 
+        gap: 30px;
+    }
+    .owner-profile img {
+        margin-bottom: 0; 
+    }
+}
+
+
 /* Enquiry Form Styling  */
-/* ===================== */
+
 .enquiry-page form {
   max-width: 500px;
   margin: 20px auto 0;
@@ -109,12 +184,13 @@ body {
   background-color: #1b5e20;
 }
 
-/* ===================== */
+
 /* Contact Page Styling  */
-/* ===================== */
+
 .contact-page {
   padding: 40px 20px;
 }
+
 
 .contact-info {
   display: grid;
@@ -152,20 +228,15 @@ body {
   padding: 20px;
   background-color: #f8f9fa;
   border-radius: 12px;
-  text-align: center; /* center the whole section */
-  color: #222; /* dark text for readability */
+  text-align: center; 
+  color: #222; 
 }
 
 .owner-section h2 {
   margin-bottom: 20px;
-  color: #2e7d32; /* green accent for title */
+  color: #2e7d32; 
 }
 
-.owner-profile {
-  display: inline-block; /* keeps image+text grouped */
-  text-align: center; /* align text under image */
-  max-width: 600px;
-}
 
 .owner-profile img {
   width: 200px;
@@ -182,4 +253,3 @@ body {
 .owner-text p {
   line-height: 1.6;
 }
-
