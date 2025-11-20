@@ -92,19 +92,19 @@ git clone [https://github.com/LangaLeAfrika/ST10465745-Luxolo-Maqashalala-WEDE50
 
 Changelog
 
-Date/Commit ID (LangaLeAfrika),Virsion Updates,"services.html, style.css, enquiry.html, contact.html, about.html, index.html"
-f4173b1,Initial commit setting up the core project folder structure and base HTML files.,Initial files
-7b1b99c,"Final commit: Completed content integration across all HTML pages, added new images, and implemented base CSS styles.","services.html, style.css, enquiry.html, contact.html, about.html, new images, script.js"
-[November 2025],Resolved merge conflicts during git rebase and prepared for final submission.,"services.html, style.css, enquiry.html, contact.html, about.html, index.html"
+18 November/POE Final Commit ID (LangaLeAfrika), Version Updates, "services.html, style.css, enquiry.html, contact.html, about.html, index.html"
+f4173b1, Initial commit setting up the core project folder structure and base HTML files., Initial files
+7b1b99c, "Final commit: Completed content integration across all HTML pages, added new images, and implemented base CSS styles."services.html, style.css, enquiry.html, contact.html, about.html, new images, script.js"
+[November 2025], Resolved merge conflicts during git rebase and prepared for final submission."services.html, style.css, enquiry.html, contact.html, about.html, index.html"
 * Update: README
 * 9faa627: 7 hours ago
 
 **POE Final Commit**
 
-README.mdUpdate README7 hours agoabout.htmlPOE Final commit8 hours ago
-contact.htmlPOE Final commit8 hours agoenquiry.htmlPOE Final commit8 hours agoindex.htmlPOE Final commit8 hours agoscript.js
-POE Final commit8 hours agoservices.htmlPOE Final commit
-8 hours agostyle.css
+README.md Update README 7 hours ago about.htmlPOE Final commit8 hours ago
+contact.htmlPOE Final commit8 hours agoenquiry.htmlPOE Final commit 8 hours ago index.htmlPOE Final commit 8 hours ago script.js
+POE Final commit 8 hours ago services.htmlPOE Final commit
+8 hours ago style.css
 POE Final commit 1 day ago,...
 
 Refference
